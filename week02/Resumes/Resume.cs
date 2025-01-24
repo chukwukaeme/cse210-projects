@@ -5,7 +5,6 @@ public class Resume
 
     public Resume()
     {
-
     }
     public void Display()
     {
