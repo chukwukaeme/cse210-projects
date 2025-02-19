@@ -1,0 +1,3 @@
+200
+SimpleGoal|Go to church tomorrow|To Owerri|50|True
+EternalGoal|pray|to God|20
