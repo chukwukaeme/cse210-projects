@@ -29,13 +29,13 @@ public class ReflectionActivity : Activity
     {
         Random random = new Random();
         Console.WriteLine(Prompts[random.Next(Prompts.Count)]);
-        ShowAnimation(3);
+        ShowSpinner(3);
 
         int elapsed = 0;
-        while (elapsed < Duration)
+        while (elapsed < _duration)
         {
             Console.WriteLine(Questions[random.Next(Questions.Count)]);
-            ShowAnimation(3);
+            ShowSpinner(3);
             elapsed += 3;
         }
     }

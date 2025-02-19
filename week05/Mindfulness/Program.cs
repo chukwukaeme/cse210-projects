@@ -39,7 +39,7 @@ class Program
                     continue;
             }
 
-            activity.Start();
+            activity.DisplayStartingMessage();
         }
     }
 }

@@ -17,11 +17,11 @@ public class ListingActivity : Activity
     {
         Random random = new Random();
         Console.WriteLine(Prompts[random.Next(Prompts.Count)]);
-        ShowAnimation(3);
+        ShowSpinner(3);
         
         List<string> responses = new List<string>();
         int elapsed = 0;
-        while (elapsed < Duration)
+        while (elapsed < _duration)
         {
             Console.Write("Enter an item: ");
             responses.Add(Console.ReadLine());

@@ -1,38 +1,38 @@
 public abstract class Activity
 {
-    protected string Name;
-    protected string Description;
-    protected int Duration;
+    protected string _name;
+    protected string _description;
+    protected int _duration;
 
     public Activity(string name, string description)
     {
-        Name = name;
-        Description = description;
+        _name = name;
+        _description = description;
     }
 
-    public void Start()
+    public void DisplayStartingMessage()
     {
         Console.Clear();
-        Console.WriteLine($"Starting {Name} Activity");
-        Console.WriteLine(Description);
-        Console.Write("Enter duration in seconds: ");
-        Duration = int.Parse(Console.ReadLine());
+        Console.WriteLine($"Starting {_name} Activity");
+        Console.WriteLine(_description);
+        Console.Write("Enter long, in seconds, would you like for your session?: ");
+        _duration = int.Parse(Console.ReadLine());
 
         Console.WriteLine("Prepare to begin...");
-        ShowAnimation(3);
+        ShowSpinner(3);
         RunActivity();
-        End();
+        DisplayEndingMessage();
     }
 
     protected abstract void RunActivity();
 
-    private void End()
+    private void DisplayEndingMessage()
     {
-        Console.WriteLine($"Good job! You completed the {Name} activity for {Duration} seconds.");
-        ShowAnimation(3);
+        Console.WriteLine($"Good job! You completed the {_name} activity for {_duration} seconds.");
+        ShowSpinner(3);
     }
 
-    protected void ShowAnimation(int seconds)
+    protected void ShowSpinner(int seconds)
     {
         for (int i = 0; i < seconds; i++)
         {

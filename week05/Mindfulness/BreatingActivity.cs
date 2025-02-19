@@ -7,16 +7,16 @@ public class BreathingActivity : Activity
     protected override void RunActivity()
     {
         int elapsed = 0;
-        while (elapsed < Duration)
+        while (elapsed < _duration)
         {
             Console.WriteLine("Breathe in...");
-            ShowAnimation(3);
+            ShowSpinner(3);
             elapsed += 3;
 
-            if (elapsed >= Duration) break;
+            if (elapsed >= _duration) break;
 
             Console.WriteLine("Breathe out...");
-            ShowAnimation(3);
+            ShowSpinner(3);
             elapsed += 3;
         }
     }
