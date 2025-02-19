@@ -11,12 +11,14 @@ public class BreathingActivity : Activity
         {
             Console.WriteLine("Breathe in...");
             ShowSpinner(3);
+            ShowCountDown(3);
             elapsed += 3;
 
             if (elapsed >= _duration) break;
 
             Console.WriteLine("Breathe out...");
             ShowSpinner(3);
+            ShowCountDown(3);
             elapsed += 3;
         }
     }
